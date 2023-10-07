@@ -1,0 +1,23 @@
+#!/bin/sh
+
+set -e
+
+lb config noauto \
+        --clean \
+        --ignore-system-defaults \
+        --mode debian \
+        --debian-installer live \
+        --distribution bookworm \
+        --zsync false \
+        --linux-packages "linux-image linux-headers" \
+        --update true \
+        --color \
+        --binary-image iso-hybrid \
+        --apt apt \
+        --apt-source-archive false \
+        --backports false \
+        --architecture amd64 \
+        --archive-areas "main non-free non-free-firmware contrib" \
+        --image-name blue-live \
+        --iso-publisher piratax007 \
+"${@}"
