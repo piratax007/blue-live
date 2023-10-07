@@ -9,7 +9,6 @@ lb config noauto \
         --debian-installer live \
         --distribution bookworm \
         --zsync false \
-        --linux-packages "linux-image linux-headers" \
         --update true \
         --color \
         --binary-image iso-hybrid \
@@ -20,4 +19,6 @@ lb config noauto \
         --archive-areas "main non-free non-free-firmware contrib" \
         --image-name blue-live \
         --iso-publisher piratax007 \
+        --linux-packages "linux-image linux-headers" \
+        --source true \
 "${@}"
