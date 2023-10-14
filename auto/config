@@ -7,7 +7,7 @@ lb config noauto \
         --ignore-system-defaults \
         --mode debian \
         --debian-installer live \
-        --distribution bookworm \
+        --distribution trixie \
         --zsync false \
         --update true \
         --color \
